@@ -258,7 +258,7 @@
     -webkit-transition: width 0.25s ease, background 0.25s ease;
     -moz-transition: width 0.25s ease, background 0.25s ease;
     -ms-transition: width 0.25s ease, background 0.25s ease;
-    background: #1c45ef;
+    background: #35394b;
     width: 270px;
     height: 63px; }
     .navbar.default-layout .navbar-brand-wrapper .navbar-brand {
@@ -379,7 +379,7 @@
 /* Sidebar */
 .sidebar {
   min-height: calc(100vh - 63px);
-  background: linear-gradient(to top, #5768f3, #1c45ef);
+  background: linear-gradient(to top, #444a72, #454a5f);
   font-family: "roboto", sans-serif;
   padding: 0;
   width: 270px;
@@ -635,7 +635,7 @@
   margin-bottom: 2px; }
   @media (max-width: 992px) {
     .page-title {
-      margin-botttom: 15px; } }
+      margin-bottom: 15px; ; } }
 
 .quick-links {
   list-style: none;

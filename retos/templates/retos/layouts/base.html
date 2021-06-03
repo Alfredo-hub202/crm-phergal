@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css' %}">
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  
+    <!-- Fengyuan Chen's Datepicker -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css" integrity="sha256-b88RdwbRJEzRx95nCuuva+hO5ExvXXnpX+78h8DjyOE=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.js" integrity="sha256-/7FLTdzP6CfC1VBAj/rsp3Rinuuu9leMRGd354hvk0k=" crossorigin="anonymous"></script>
+    
     <link rel="shortcut icon" href="/static/assets/images/favicon.png" />
     <link rel="canonical" href="#" />
-
-    <title>CRM-Phergal - {% block title %}{% endblock %} | AppSeed</title>
+    <!-- XDSoft DateTimePicker -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css"
+      integrity="sha256-DOS9W6NR+NFe1fUhEE0PGKY/fubbUCnOfTje2JMDw3Y="
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"
+      integrity="sha256-FEqEelWI3WouFOo2VWP/uJfs1y8KJ++FLh2Lbqc8SJk="
+      crossorigin="anonymous"
+    ></script>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <title>Retos - {% block title %}{% endblock %} | AppSeed</title>
 
     <link
       rel="stylesheet"
@@ -36,11 +57,17 @@
 
     <link rel="stylesheet" href="/static/assets/css/shared/style.css" />
     <link rel="stylesheet" href="/static/assets/css/demo_1/style.css" />
+    <link rel="stylesheet" href="/static/assets/css/demo_1/button.css" />
 
     <!-- Specific CSS goes HERE -->
     {% block stylesheets %}{% endblock stylesheets %}
   </head>
   <body>
+  <script src="{% static 'assets/js/bootstrap.js' %}"></script>
+  <script src="{% static 'assets/js/jquery.js' %}"></script>
+  <script src="{% static 'js/jquery.bootstrap.modal.forms.js' %}"></script>
+  <!-- You can alternatively load the minified version -->
+  <script src="{% static 'js/jquery.bootstrap.modal.forms.min.js' %}"></script>
     <div class="container-scroller">
       {% include 'includes/navigation.html' %}
 
@@ -63,23 +90,8 @@
     <!-- Specific JS goes HERE -->
     {% block javascripts %}
     <script type="text/javascript">
-
-  var $ = JQuery.notConflict()
-  
-  funcion abrir_modal_edicion(url){
-
-    $('#edicion button.btn-info').on('url', function(e) {
-      $(this).modal('show');
-  })
-
-  function hideButton(){
-    $(".loading").hide();
- }
- function showButton(){
-    $(".loading").show();
- }
-    }
-</script>
+    </script>
     {% endblock javascripts %}
+    
   </body>
 </html>

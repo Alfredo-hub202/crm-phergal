@@ -1,0 +1,81 @@
+{% extends "layouts/base.html" %} {% block title %} {% endblock title %} 
+{% load crispy_forms_tags %} {% block content %}
+
+<div class="jumbotron">
+  <div class="mx-auto" style="width: 800px">
+    <form method="post" novalidate>
+      {% csrf_token %} {{form.as_p}} 
+      
+ 
+
+      <button type="submit" class="btn btn-primary">Modificar</button>
+    </form>
+  </div>
+</div>
+<div class="content-wrapper">
+    <!-- Page Title Header Starts-->
+    <div class="row page-title-header">
+      <div class="col-12">
+        <div class="page-header">
+          <h4 class="page-title">Retos</h4>
+          <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
+            <ul class="quick-links">
+              <li><a href="#">Activos</a></li>
+             
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card" style="width: 18rem;">
+    <div class="card-body">
+    <div class="card-header">
+      Titulo Reto
+      <span id="imgContrasena" data-activo=false class="glyphicon glyphicon-eye-open"></span>
+    </div>
+      <p class="card-text">Movil: <br>
+      Email: <br>
+      Fecha Nacimiento: <br>
+      Fecha Ult. Modificación: 23/04/2019</p>
+    </div>
+    No hay retos activos
+
+
+  </div>
+  </div>
+
+  <div class="content-wrapper">
+    <!-- Page Title Header Starts-->
+    <div class="row page-title-header">
+      <div class="col-12">
+        <div class="page-header">
+          <h4 class="page-title">Retos</h4>
+          <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
+            <ul class="quick-links">
+              <li><a href="#">Finalizados</a></li>
+             
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card" style="width: 18rem;">
+    <div class="card-body">
+    <div class="card-header">
+      Titulo Reto
+      <span id="imgContrasena" data-activo=false class="glyphicon glyphicon-eye-open"></span>
+    </div>
+      <p class="card-text">Movil: <br>
+      Email: <br>
+      Fecha Nacimiento: <br>
+      Fecha Ult. Modificación: 23/04/2019</p>
+    </div>
+    No hay retos activos
+
+
+  </div>
+  </div>
+
+{% endblock %}

@@ -8,10 +8,12 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link rel="shortcut icon" href="/static/assets/images/favicon.png" />
-    <link rel="canonical" href="#" />
+    <link
+      rel="canonical"
+      href="https://appseed.us/admin-dashboards/django-star-admin"
+    />
 
-    <title>CRM-Phergal - {% block title %}{% endblock %} | AppSeed</title>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>CRM Phergal - {% block title %}{% endblock %} | Retos</title>
 
     <link
       rel="stylesheet"
@@ -42,44 +44,15 @@
   </head>
   <body>
     <div class="container-scroller">
-      {% include 'includes/navigation.html' %}
-
-      <!-- partial -->
-      <div class="container-fluid page-body-wrapper">
-        {% include 'includes/sidebar.html' %}
-
-        <!-- partial -->
-        <div class="main-panel">
-          {% block content %}{% endblock content %} {% include 'includes/footer.html' %}
-        </div>
-        <!-- main-panel ends -->
+      <div class="container-fluid page-body-wrapper full-page-wrapper">
+        {% block content %}{% endblock content %}
       </div>
-      <!-- page-body-wrapper ends -->
     </div>
     <!-- container-scroller -->
 
     {% include 'includes/scripts.html' %}
 
     <!-- Specific JS goes HERE -->
-    {% block javascripts %}
-    <script type="text/javascript">
-
-  var $ = JQuery.notConflict()
-  
-  funcion abrir_modal_edicion(url){
-
-    $('#edicion button.btn-info').on('url', function(e) {
-      $(this).modal('show');
-  })
-
-  function hideButton(){
-    $(".loading").hide();
- }
- function showButton(){
-    $(".loading").show();
- }
-    }
-</script>
-    {% endblock javascripts %}
+    {% block javascripts %}{% endblock javascripts %}
   </body>
 </html>

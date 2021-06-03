@@ -1,0 +1,153 @@
+{% extends "layouts/base.html" %} {% block title %} {% endblock title %} 
+{% load crispy_forms_tags %} {% block content %} {% block scripts_local %}
+
+{% endblock scripts_local %}
+ <!--
+<div class="content-wrapper">
+  <!-- Page Title Header Starts-->
+  <div class="row page-title-header">
+    <div class="col-12">
+      <div class="page-header">
+        <h4 class="page-title">Retos</h4>
+        <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
+          <ul class="quick-links">
+            <li>
+              <a href="#">Activos -</a> 
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+
+      <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+        <h2>Productos activos </h2>
+     
+        <div class="carousel-inner">
+                {% for retos in retos %}
+          
+            <div class="carousel-item active">
+          
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="card">
+                            <div class="card-body">
+                            <a href="/ver_productos/{{retos.tipos_retos_id}}/"><h2 class="card-title">{{ retos.nombre }}</h2>
+                              </a>
+                                <p class="card-text">Código:{{ retos.id }}<br>
+                                Tipo de Retos:{{ retos.tipos_retos }}<br />
+                                Fecha Inicio: {{ retos.fecha_ini }}<br />
+                                Fecha Final:  {{ retos.fecha_fin }}<br />
+                               
+                                  <div class="card-footer">
+                                  <small class="text-muted"> Maximo de venta: {{ retos.max_venta }}<br />
+                                  Numero de Ventas Activas: {{ retos.n_ventas_activas }}<br /></small>
+                                </div>
+                            </div>
+                          
+                        </div>
+                  {% empty %}
+                    <h2>Lo siento, no hay Retos Activos.</h2>
+                  {% endfor %}
+                   
+            </div>
+
+<section class="pt-5 pb-5">
+    <div class="container">
+      <div class="row">
+          <!-- <div class="col-6">
+              <h3 class="mb-3">Retos Activos </h3>
+          </div> -->
+          <div class="col-12 text-right">
+              <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                  <i class="fa fa-arrow-left"></i>
+              </a>
+              <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
+                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+              </a>
+          </div>
+          <div class="col-12">
+              <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                <h2>Productos Finalizados </h2>
+     
+                  <div class="carousel-inner">
+                  {% for retos_finalizados in retos_finalizados %}
+                      <div class="carousel-item active">
+                    
+                          <div class="row">
+                              <div class="col-md-4 mb-3">
+                                  <div class="card">
+                                      <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532781914607-2031eca2f00d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=7c625ea379640da3ef2e24f20df7ce8d">
+                                      <div class="card-body">
+                                        <a href="/ver_productos/{{retos_finalizados.tipos_retos_id}}/"><h2 class="card-title">{{ retos_finalizados.nombre }}</h2>
+                                        </a>
+                                          <p class="card-text">Código:{{ retos.id }}<br>
+                                          Tipo de Retos:{{ retos_finalizados.tipos_retos }}<br />
+                                          Fecha Inicio: {{ retos_finalizados.fecha_ini }}<br />
+                                          Fecha Final:  {{ retos_finalizados.fecha_fin }}<br />
+                                         
+                                            <div class="card-footer">
+                                            <small class="text-muted"> Maximo de venta: {{ retos_finalizados.max_venta }}<br />
+                                            Numero de Ventas Activas: {{ retos_finalizados.n_ventas_activas }}<br /></small>
+                                          </div>
+                                      </div>
+                                    
+                                  </div>
+                                 
+                              </div>
+                            {% empty %}
+                              <h2>Lo siento, no hay Retos Activos.</h2>
+                            {% endfor %}
+                             
+                      </div>
+                      <div class="carousel-item">
+                          <div class="row">
+    
+                              <div class="col-md-4 mb-3">
+                                  <div class="card">
+                                      <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=ee8417f0ea2a50d53a12665820b54e23">
+                                      <div class="card-body">
+                                          <h4 class="card-title">Special title treatment</h4>
+                                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    
+                                      </div>
+    
+                                  </div>
+                              </div>
+                              <div class="col-md-4 mb-3">
+                                  <div class="card">
+                                      <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532777946373-b6783242f211?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=8ac55cf3a68785643998730839663129">
+                                      <div class="card-body">
+                                          <h4 class="card-title">Special title treatment</h4>
+                                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-4 mb-3">
+                                  <div class="card">
+                                      <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532763303805-529d595877c5?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=5ee4fd5d19b40f93eadb21871757eda6">
+                                      <div class="card-body">
+                                          <h4 class="card-title">Special title treatment</h4>
+                                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    </section>
+    </div>
+    
+    </div>
+    
+    </div>
+    </div>
+
+
+{% endblock %}
+</div>
+  <!-- Specific JS goes HERE -->
+

@@ -6,17 +6,29 @@
   rel="stylesheet"
   href="/static/assets/vendors/iconfonts/font-awesome/css/font-awesome.min.css"
 />
-
 <div class="content-wrapper">
-  <div class="row">
-    <div class="col-lg-12 grid-margin stretch-card">
-      <div class="card">
-        <div class="card-body">
-          <i class="fa fa-plus-square"></i>
+  <!-- Page Title Header Starts-->
+  <div class="row page-title-header">
+    <div class="col-12">
+      <div class="page-header">
+        <h4 class="page-title">Empleados De Retos</h4>
+      </div>
+    </div>
+  </div>
 
-          <h4 class="card-title">Bordered table</h4>
-          <p class="card-description">Add class <code>.table-bordered</code></p>
-          <table class="table table-hover">
+  <div class="col-md-12 grid-margin">
+    <div class="card">
+      <div class="card-body">
+        <div class="d-flex justify-content-between">
+          <a href="#"
+            ><small>
+              <p class="card-description">
+                Add Empleado <i class="fa fa-plus-square"></i></p></small
+          ></a>
+        </div>
+        <p>Empleados reto</p>
+        <div class="table-responsive">
+          <table class="table table-striped table-hover">
             <thead>
               <tr>
                 <th>Nombre</th>
@@ -25,134 +37,22 @@
                 <th>Fecha de Nacimiento</th>
                 <th>Email</th>
                 <th>Farmacia</th>
+                <th>Accion</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>1</td>
-                <td>Herman Beck</td>
+                <td>Tony</td>
+                <td>Rojo</td>
+                <td>633549875</td>
+                <td>15/02/1890</td>
+                <td>Tony@phergal.com</td>
+                <td>Farmacell</td>
                 <td>
-                  <div class="progress">
-                    <div
-                      class="progress-bar bg-success"
-                      role="progressbar"
-                      style="width: 25%"
-                      aria-valuenow="25"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
+                  <button type="button" class="btn btn-primary">Ver</button>
+                  <button type="button" class="btn btn-success">Editar</button>
+                  <button type="button" class="btn btn-danger">Eliminar</button>
                 </td>
-                <td>$ 77.99</td>
-                <td>May 15, 2015</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Messsy Adam</td>
-                <td>
-                  <div class="progress">
-                    <div
-                      class="progress-bar bg-danger"
-                      role="progressbar"
-                      style="width: 75%"
-                      aria-valuenow="75"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </td>
-                <td>$245.30</td>
-                <td>July 1, 2015</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>John Richards</td>
-                <td>
-                  <div class="progress">
-                    <div
-                      class="progress-bar bg-warning"
-                      role="progressbar"
-                      style="width: 90%"
-                      aria-valuenow="90"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </td>
-                <td>$138.00</td>
-                <td>Apr 12, 2015</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>Peter Meggik</td>
-                <td>
-                  <div class="progress">
-                    <div
-                      class="progress-bar bg-primary"
-                      role="progressbar"
-                      style="width: 50%"
-                      aria-valuenow="50"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </td>
-                <td>$ 77.99</td>
-                <td>May 15, 2015</td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>Edward</td>
-                <td>
-                  <div class="progress">
-                    <div
-                      class="progress-bar bg-danger"
-                      role="progressbar"
-                      style="width: 35%"
-                      aria-valuenow="35"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </td>
-                <td>$ 160.25</td>
-                <td>May 03, 2015</td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>John Doe</td>
-                <td>
-                  <div class="progress">
-                    <div
-                      class="progress-bar bg-info"
-                      role="progressbar"
-                      style="width: 65%"
-                      aria-valuenow="65"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </td>
-                <td>$ 123.21</td>
-                <td>April 05, 2015</td>
-              </tr>
-              <tr>
-                <td>7</td>
-                <td>Henry Tom</td>
-                <td>
-                  <div class="progress">
-                    <div
-                      class="progress-bar bg-warning"
-                      role="progressbar"
-                      style="width: 20%"
-                      aria-valuenow="20"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    ></div>
-                  </div>
-                </td>
-                <td>$ 150.00</td>
-                <td>June 16, 2015</td>
               </tr>
             </tbody>
           </table>
@@ -160,6 +60,9 @@
       </div>
     </div>
   </div>
+</div>
+<div class="content-wrapper">
+  <div class="row"></div>
 </div>
 
 {% endblock content %}

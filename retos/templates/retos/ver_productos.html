@@ -1,0 +1,82 @@
+
+  {% extends "layouts/base.html" %} {% block title %} {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %} {% block content %}
+
+<div class="content-wrapper">
+  <!-- Page Title Header Starts-->
+  <div class="row page-title-header">
+    <div class="col-12">
+      <div class="page-header">
+        <h4 class="page-title">Retos</h4>
+        <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
+          <ul class="quick-links">
+            <li><a href="#">Buscador</a></li>
+            <li><a href="#">Mi personal</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="pt-5 pb-5">
+    <div class="container">
+      <div class="row">
+          <!-- <div class="col-6">
+              <h3 class="mb-3">Retos Activos </h3>
+          </div> -->
+    
+    
+          <div class="col-12">
+              <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                <form action="" method="POST">
+                    <div id="home" class="tab-pane active">
+                      {% csrf_token %} {{form.as_p}}
+              
+                  <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                    <h2>Productos activos </h2>
+                 
+                    <div class="carousel-inner">
+                      {% for productos in productos %}
+                      
+                        <div class="carousel-item active">
+                      
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                
+                                        <div class="card-body">
+                                          <a href="#"><h2 class="card-title">{{ productos.producto }}</h2>
+                                          </a>
+                                        </div>
+                                      
+                                    </div>
+                                   
+                                </div>
+                              {% empty %}
+                                <h2>Lo siento, no hay Retos Activos.</h2>
+                              {% endfor %}
+                               
+                        </div>
+                        <br>
+                        <button
+                        type="button"
+                        class="btn btn-default"
+                        data-dismiss="modal"
+                      >
+                        Cerrar
+                      </button>
+                      <button class="btn btn-primary" type="submit">Guardar</button>
+                      <div class="modal-footer"></div>
+                    </div>
+                  </form>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    </section>
+  </div>
+  {% endblock content %}
+
+  <!-- Specific JS goes HERE -->

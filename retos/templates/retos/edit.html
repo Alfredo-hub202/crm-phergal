@@ -1,0 +1,40 @@
+{% extends "layouts/base.html" %} {% block title %} {% endblock title %}  
+{% load crispy_forms_tags %} {% block content %} {% block scripts_local %} {% endblock scripts_local %}
+<div class="content-wrapper">
+  <!-- Page Title Header Starts-->
+  <div class="row page-title-header">
+    <div class="col-12">
+      <div class="page-header">
+        <h4 class="page-title">Retos</h4>
+        <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
+          <ul class="quick-links">
+            <li><a href="#">Modificar</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="jumbotron">
+    <form method="post" novalidate>
+    {% csrf_token %} {{form.as_p}}
+    <button
+      type="button"
+      class="btn btn-default"
+      data-dismiss="modal"
+    >
+      Cerrar
+    </button>
+    <button type="submit" class="btn btn-primary">
+      Modificar
+    </button>
+  </form>
+    
+  </div>
+</div>
+</div>
+
+  <!-- Specific JS goes HERE -->
+  {% block javascripts %}{% endblock javascripts %} {% endblock %}
+

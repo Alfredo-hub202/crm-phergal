@@ -1,0 +1,145 @@
+{% extends "layouts/base.html" %} {% block title %} Dashboard 
+{% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %} {% block content %}
+<div class="row page-title-header">
+  <div class="col-12">
+    <div class="page-header">
+      <h4 class="page-title">Retos</h4>
+      <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
+        <ul class="quick-links">
+          <li><a href="#">Buscador</a></li>
+          <li><a href="#">Mi personal</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="content-wrapper">
+  <div class="class="auto-form-wrapper border">
+  <div class="container">
+    <form>
+      <div class="form-group">
+        <label for="inputAddress">Nombre</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputAddress"
+          placeholder="Nombre"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">Apellidos(*)</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputAddress2"
+          placeholder="Apellidos"
+          required
+        />
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="inputEmail4"
+            placeholder="Email"
+          />
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Movil</label>
+          <input
+            type="number"
+            class="form-control"
+            id="inputPassword4"
+            placeholder="Telefono"
+          />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputCity">Fecha Nacimiento</label>
+          <input
+            id="datepicker"
+            class="form-control"
+            width="276"
+            value="02/04/2018"
+          />
+        </div>
+      </div>
+    </form>
+  </div>
+  </div>
+  <div class="content-wrapper">
+    <!-- Page Title Header Starts-->
+    <div class="row page-title-header">
+      <div class="col-12">
+        <div class="page-header">
+          <h4 class="page-title">Personal</h4>
+          <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
+            <ul class="quick-links">
+              <li><a href="#">Activo</a></li>
+             
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card" style="width: 18rem;">
+    <div class="card-body">
+    <div class="card-header">
+     Nombre Personal
+      <span id="imgContrasena" data-activo=false class="glyphicon glyphicon-eye-open"></span>
+    </div>
+      <p class="card-text">Movil: <br>
+      Email: <br>
+  
+
+    </div>
+    No hay retos activos
+
+
+  </div>
+  </div>
+</div>
+<div class="content-wrapper">
+
+  <div class="content-wrapper">
+    <!-- Page Title Header Starts-->
+    <div class="row page-title-header">
+      <div class="col-12">
+        <div class="page-header">
+          <h4 class="page-title">Retos </h4>
+          <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
+            <ul class="quick-links">
+              <li><a href="#">Finalizados</a></li>
+             
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="card" style="width: 18rem;">
+    <div class="card-body">
+    <div class="card-header">
+     Nombre del Reto
+      <span id="imgContrasena" data-activo=false class="glyphicon glyphicon-eye-open"></span>
+    </div>
+      <p class="card-text">Código: <br>
+        Artículos Reto Totales:6 <br>
+        Fecha Finalización: 23/04/2019 
+    </div>
+    No hay retos activos
+
+
+  </div>
+  </div>
+</div>
+
+{% endblock content %}

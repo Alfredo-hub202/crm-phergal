@@ -12,8 +12,7 @@
           <ul class="quick-links">
             <li><a href="#">Modificar</a></li>
           </ul>
-        </div>
-        
+        </div> 
       </div>
     </div>
   </div>
@@ -25,7 +24,7 @@
         </h2>
           <form method="post" novalidate>
             {% csrf_token %} {{form.as_p}}
-
+            
             <button type="submit" class="btn btn-primary">Guardar</button>
           </form>  
       </div>

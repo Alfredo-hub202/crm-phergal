@@ -171,7 +171,8 @@ class Empleados(models.Model):
     changed = models.DateTimeField('Changed', auto_now=True)
     cliente = models.ForeignKey(
         Cliente,
-        on_delete=models.CASCADE
+        on_delete=models.CASCADE,
+        null=True, blank=True
     )
     estado = models.BooleanField('estado', default=True)
 

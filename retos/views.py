@@ -8,7 +8,7 @@ from datetime import date
 # Create your views here.
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import *
-from .forms import tipo_reto_Form, empleados_Form, Cliente_Form, Cli_retos_art_Form
+from .forms import empleados_Form, Cliente_Form, Cli_retos_art_Form
 from django.views.generic import ListView, DetailView
 from django.template import loader
 
@@ -22,15 +22,13 @@ def listar_empleados(request):
 
 
 def create(request):
-
-    if request.method == 'POST':
-        print(request.user.id)
-        form = empleados_Form(request.POST)
-        if form.is_valid():
-            form.save()
+    form = empleados_Form(request.POST)
+    print(request.POST)
+    # Le damos solo una opcion al campo status
+    form.fields['cliente'].choices = [(request.user.id, request.user.id)]
+    if form.is_valid():
+        form.save()
         return redirect('index')
-    form = empleados_Form()
-    # return render(request, 'retos/create_copy.html', {'form': form})
     return render(request, 'retos/create.html', {'form': form})
 
 
@@ -88,13 +86,13 @@ def listar_detalles__retos(request, id):
 def create_detalles__productos(request, id):
     if request.method == 'POST':
         form = Cli_retos_art(request.POST, cliente_reto_id=id)
+        form.fields['cliente_reto'].choices = [(id, 'hola')]
+
         if form.is_valid():
             form.save()
         return redirect('index')
     form = Cli_retos_art_Form()
     productos = Productos_retos.objects.filter(tipo_retos_id=id)
-    context = {'productos': productos}
-    print(context)
     # return render(request, 'retos/create_copy.html', {'form': form})
     return render(request, 'retos/ver_productos.html', {'form': form, 'productos': productos})
 

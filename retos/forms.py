@@ -11,7 +11,7 @@ class empleados_Form(forms.ModelForm):
     class Meta:
         model = Empleados
         fields = ['nombre', 'apellido', 'telefono',
-                  'fecha_nacimiento', 'email']
+                  'fecha_nacimiento', 'email', 'cliente']
         date = forms.DateField(
             widget=DatePickerInput(format='%m/%d/%Y')
         )
@@ -22,6 +22,7 @@ class empleados_Form(forms.ModelForm):
             self.fields[field].widget.attrs.update({
                 'class': 'form-control'
             })
+        self.fields['cliente'].widget.attrs['hidden'] = 0
 
 
 class tipo_reto_Form(forms.ModelForm):
@@ -49,9 +50,9 @@ class Cli_retos_art_Form(forms.ModelForm):
 
     class Meta:
         model = Cli_retos_art
-        fields = ['n_ticket', 'cliente_reto',
-                  'images']
-        # fields = "__all__"
+        # fields = ['n_ticket', 'cliente_reto',
+        #           'images']
+        fields = "__all__"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
